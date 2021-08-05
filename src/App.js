@@ -1,15 +1,15 @@
 // import FirstSlider from './components/FirstSlider';
-// import Navbar from './components/Navbar'
+import Navbar from './components/Navbar'
 import BookList from "./components/BookList";
 
 
 function App() {
   return (
     <div >
-      {/* <Navbar / > */}
+      <Navbar / >
       Welcome Anarchists!
       {/* <FirstSlider /> */}
-      <BookList />
+      {/* <BookList /> */}
     </div>
   );
 }
