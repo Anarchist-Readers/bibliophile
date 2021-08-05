@@ -32,9 +32,9 @@ const BookDetails = ({match}) => {
       <div className="grid grid-cols-3 grid-rows-7 grid-flow-row overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <div className="col-span-1 row-span-6">
           
-          <a href={`/books/${book[0].id}`}>
+          {/* <a href={`/books/${book[0].id}`}> */}
             <img src={book[0].cover_url} alt={book[0].title} className="rounded object-cover h-250 w-full" />
-          </a>
+          {/* </a> */}
         </div>
         <div className="col-span-2 row-span-1">
             <div className="p-2  flex justify-end">
@@ -83,7 +83,11 @@ const BookDetails = ({match}) => {
           </ul>
         </div>
       </div>
-    </div> : null }
+    </div> 
+    <div>
+        
+    </div>
+    : null }
   </div>)
 }
 
