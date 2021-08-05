@@ -12,10 +12,9 @@ const Book = ({book}) => {
     <div className="w-96 m-auto ">
       <div className=" grid grid-cols-3 grid-rows-7 grid-flow-row overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <div className="col-span-1 row-span-6">
-          
-          <a href={`/Book/${book.id}`}>
+          <Link to={`/books/${book.id}`}>
             <img src={book.cover_url} alt={book.title} className="rounded object-cover h-50 w-full" />
-          </a>
+          </Link>
         </div>
         <div className="col-span-2 row-span-1">
             <div className="p-2  flex justify-end">
@@ -40,9 +39,9 @@ const Book = ({book}) => {
         <div className="col-span-2 row-span-1">
           <header className="flex items-center justify-between leading-tight p-2 md:p-4">
             <h1 className="text-lg">
-              <a className="no-underline hover:underline text-black" href={`/Book/${book.id}`}>
+              <Link className="no-underline hover:underline text-black" to={`/books/${book.id}`}>
                 {book.title}
-              </a>
+              </Link>
             </h1>
           </header>
         </div>
@@ -53,12 +52,12 @@ const Book = ({book}) => {
             </div>
         </div>
         <div className="col-span-2 row-span-1">
-          <ul className="flex flex-row pl-2 text-gray-600 overflow-x-scroll hide-scroll-bar">
+          <ul className="flex flex-row pl-2 text-gray-600">
               <li className="py-1">
                 <div className="transition duration-300 ease-in-out rounded-2xl mr-1 px-2 py-1 hover:bg-blue-200 text-gray-500 hover:text-gray-800">
-                  <a className="" href={`/Search?genre=${book.name}`}>
+                  <Link className="" to={`/search?genre=${book.genre}`}>
                     #{book.genre}
-                  </a>
+                  </Link>
                 </div>
               </li>
           </ul>
