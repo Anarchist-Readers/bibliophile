@@ -1,6 +1,6 @@
  import React, { useState } from 'react'
  import FirstSlider from './components/FirstSlider';
-// import Navbar from './components/Navbar'
+import Navbar from './components/Navbar'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import BookList from "./components/BookList";
 import BookDetails from "./components/BookDetails"
@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
     <div >
-      {/* <Navbar / > */}
+      <Navbar / >
       Welcome Anarchists!
       
       {/* Routes */}
