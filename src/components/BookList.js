@@ -1,31 +1,25 @@
 import axios from 'axios'
+import Book from './Book'
 import { useState, useEffect } from 'react'
 
-const baseURL = 'http://openlibrary.org/search.json?'
+const baseURL = 'http://localhost:3001/api/books'
 
 const BookList=()=>{
     const [ bookList, setBookList ] = useState(false)
     const [ loading, setLoading ] = useState(true)
     useEffect(()=>{
-        axios.get(baseURL+'subject=medicine')
+        axios.get(baseURL)
         .then((res)=>{
-            const selectedBooks = res.data.docs.filter(book=>book.first_publish_year<1700)
-            setBookList(selectedBooks)
+            setBookList(res.data)
             setLoading(false)    
         })
         .catch((err)=>{
-         console.log("Error has occured")
+         console.log("Error has occured "+err)
         })
     })
     return(
-        <div>
-            {loading ? 'Loading ...' : bookList.docs.map(book=>{
-                return (
-                <>
-                    <p className="p-5">{book.title}</p>
-                    <img className="p-5 rounded" src={`http://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`} />
-                </>)}
-                )}
+        <div className="flex justify-around flex-wrap">
+            {loading ? 'Loading ...' : bookList.map( (book,i) => <Book key={i} book={book}/>)}
         </div>
     )
 }
