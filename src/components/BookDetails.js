@@ -1,11 +1,14 @@
 import { React, useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
+<<<<<<< HEAD
+=======
+import {Document} from 'react-pdf'
+>>>>>>> Sasmitha
 import axios from 'axios'
-
+import './Book.css'
 const baseURL = 'http://localhost:3001/api/books/'
 
 const BookDetails = ({match}) => {
-    console.log(match)
     const [ book, setBook ] = useState(false)
     const [ loading, setLoading ] = useState(true)
     let ratingColor = 'bg-yellow-100'
@@ -27,7 +30,11 @@ const BookDetails = ({match}) => {
         }
     }
     return (
+<<<<<<< HEAD
     <div className="p-10 bg-gray-100 h-screen">
+=======
+    <div className="p-10 bg-gray-60 h-screen">
+>>>>>>> Sasmitha
     {!loading ? 
     <div className="m-auto">
       <div className="grid grid-cols-3 grid-rows-7 grid-flow-row rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
@@ -46,10 +53,10 @@ const BookDetails = ({match}) => {
         </div>
         <div className="col-span-2 row-span-1">
             <div className="p-2  flex justify-end">
-            <div className={`p-1 md:p-3 flex rounded-md ${ratingColor}`}>
+            <div className={`p-1 md:p-3 flex rounded-md ${ratingColor} `}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 md:h-12 md:w-12"
+                className="h-8 w-8 md:h-12 md:w-12 "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -60,34 +67,52 @@ const BookDetails = ({match}) => {
                   d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
                 />
               </svg>
+<<<<<<< HEAD
               <p className="text-2xl md:text-5xl">{book[0].rating}</p>
+=======
+              <p className="text-2xl md:text-5xl pr-10 ">{book[0].rating}</p>
+>>>>>>> Sasmitha
             </div>
           </div>
         </div>
         <div className="col-span-2 row-span-1">
           <header className="flex items-center justify-between leading-tight p-2 md:p-5">
+<<<<<<< HEAD
               <p className="text-2xl md:text-5xl text-black">
+=======
+              <p className="text-2xl md:text-5xl text-black px-10">
+>>>>>>> Sasmitha
                 {book[0].title}
               </p>
           </header>
         </div>
         <div className="col-span-2 row-span-1">
             <div className="p-2 md:p-5 flex flex-col text-right">
+<<<<<<< HEAD
               <p className="text-sm md:text-xl text-indigo-800">Realease date:</p>
               <p className="text-grey text-sm md:text-xl">{book[0].year}</p>
+=======
+              <p className="text-sm md:text-xl text-indigo-800 pr-10">Realease date:</p>
+              <p className="text-grey text-sm md:text-xl pr-10">{book[0].year}</p>
+>>>>>>> Sasmitha
             </div>
         </div>
         <div className="col-span-2 row-span-1">
             <div className="p-2 md:p-5 flex flex-col">
+<<<<<<< HEAD
               <p className="text-md md:text-xl uppercase text-indigo-800">Description:</p>
               <p className="text-md md:text-lg">{book[0].description}</p>
+=======
+              <p className="text-md md:text-xl uppercase text-indigo-800 p-5">Description:</p>
+              <p className="text-2xl md:text-xl cardComponent p-10 bg-bookGreen rounded-lg text-bookWhite shadow-lg">{book[0].description}</p>
+>>>>>>> Sasmitha
             </div>
         </div>
         <div className="col-span-2 row-span-1">
           <ul className="flex flex-row pl-2 text-gray-600">
               <li className="py-1">
                 <div className="transition duration-300 ease-in-out rounded-2xl mr-1 px-2 py-1 hover:bg-blue-200 text-gray-500 hover:text-gray-800">
-                  <a className="" href={`/Search?genre=${book[0].name}`}>
+                  <a className="text-bookRed text-lg p-10" href={`/Search?genre=${book[0].name}`}>
                     #{book[0].genre}
                   </a>
                 </div>
@@ -96,7 +121,11 @@ const BookDetails = ({match}) => {
         </div>
       </div>
       <div>
+<<<<<<< HEAD
         PDF Viewer
+=======
+        {book[0].pdf_url.includes('pdf') ? <Document file={book[0].pdf_url} /> : null}
+>>>>>>> Sasmitha
       </div>
     </div> 
     : null }

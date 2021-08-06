@@ -1,33 +1,31 @@
- import React, { useState } from 'react'
+ import React from 'react'
  import FirstSlider from './components/FirstSlider';
 import Navbar from './components/Navbar'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import BookList from "./components/BookList";
-import BookDetails from "./components/BookDetails"
-import Login from './components/Login';
-import User from './components/User'
+import BookDetails from "./components/BookDetails";
+import Footer from './components/Footer';
+import User from './components/User';
 
 
 
 function App() {
-
-  const [user, setUser] = useState('')
-  const [userHandler, setUserHandler] = useState(false)
-
-
   return (
     <Router>
     <div >
-      <Navbar / >      
-      {/* Routes */}
+      <Navbar / >
       <Switch>
-        <Route path='/' exact component={FirstSlider} />
+        <Route path='/' exact>
+        <FirstSlider /><Footer />
+        </Route>
         <Route path='/books/' exact component={BookList} />
         <Route path='/books/:id' exact component={BookDetails} />
-        <Route exact path="/user/" component={User} />
+        <Route path='/user/' exact component={User} />
       </Switch>
-    </div>
+      </div>
     </Router>
+
+   
   );
 }
 
