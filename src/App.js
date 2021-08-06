@@ -1,4 +1,4 @@
- import React, { useState } from 'react'
+ import React from 'react'
  import FirstSlider from './components/FirstSlider';
 import Navbar from './components/Navbar'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -10,11 +10,6 @@ import Footer from './components/Footer'
 
 
 function App() {
-
-  const [user, setUser] = useState('')
-  const [userHandler, setUserHandler] = useState(false)
-
-
   return (
     <Router>
     <div >

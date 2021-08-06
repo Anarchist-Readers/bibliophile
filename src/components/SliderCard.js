@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -24,7 +24,7 @@ const SliderCard = ({id}) => {
    return (
    <div class="flex flex-col p-3 bg-bookWhite w-max rounded-xl">
         <div class="relative">
-            <img class="h-96 rounded-xl" src={sliderDetail.cover_url} alt="bookimg" />
+            <img class="h-96 rounded-xl sliderCardImage" src={sliderDetail.cover_url} alt="bookimg" />
             <div class="absolute bottom-2 right-2 bg-bookRed p-1 px-2 rounded-xl text-white">
               { sliderDetail.genre}
             </div>

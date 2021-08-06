@@ -31,3 +31,10 @@
    top: -10%;
    right: 10px;
 }
+
+.sliderCardImage{
+   transition: 1s ease-in-out;
+}
+.sliderCardImage:hover{
+   transform :scale(1.25);
+}

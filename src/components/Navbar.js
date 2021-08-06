@@ -1,22 +1,25 @@
 import './Navbar.css';
 import { Search } from 'react-feather';
+import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
 
 const Navbar = () => {
+	const [activeHandler, setActiveHandler] = useState(false)
    return (
 <nav class="bg-transparent">
 				<div class="flex justify-between">
 					<div class="flex space-x-9 pl-4">
 						<div>
-							<a href="#" class="flex">
-								<img src="images/logo.png" alt="Logo" class=""/>
-							</a>
+							<Link to="/">
+								<img src="/images/logo.png" alt="Logo" class=""/>
+							</Link>
 						</div>
 					</div>
             <div class="hidden md:flex items-center">
                <div class="navbar-base">
                   <div class="relative inline-flex flex-row justify-end space-x-12 bg-bookRed p-2 rounded-l-xl px-20 pr-48">
-							<a class="menu-active py-4 px-2 text-white font-semibold text-lg">Home</a>
-							<a class="py-4 px-2 text-white font-semibold hover:text-white transition duration-300 text-lg">Categories</a>
+							<Link to='/' class={`py-4 px-2 text-white font-semibold text-lg`}>Home</Link>
+							<Link to='/books' class="menu-active py-4 px-2 text-white font-semibold hover:text-white transition duration-300 text-lg">Categories</Link>
                      <a class="py-4 px-2 text-white font-semibold hover:text-white transition duration-300 text-lg">About</a>
                      <div class="pt-2 relative mx-auto text-gray-600">
                         <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
@@ -28,7 +31,7 @@ const Navbar = () => {
                   </div>
                   <div class="avatar-wrapper relative ">
                      <div class="avatar inline-block">
-                        <img class="inline-block object-cover w-20 h-20 rounded-full" src="images/avatar1.jpg" alt="Profile image"/>
+                        <img class="inline-block object-cover w-20 h-20 rounded-full" src="/images/avatar1.jpg" alt="Profileimage"/>
                         <span class="absolute bottom-0 right-0 inline-block w-3 h-3 bg-green-600 border-2 border-white rounded-full"></span>
                         </div>
                      </div>

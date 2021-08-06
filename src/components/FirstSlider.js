@@ -44,7 +44,7 @@ const FirstSlider = ({ deviceType }) => {
   return (
 
     <div>
-      <h1 class="text-4xl px-9 py-8 flex flex-row items-center"><Zap size={32}/>Popular Books </h1>
+      <h1 class="text-4xl px-9 py-8 flex flex-row items-center text-bookRed"><Zap size={32}/>Recent Populars </h1>
     <div class="bg-bookGreen p-8">
        
 
