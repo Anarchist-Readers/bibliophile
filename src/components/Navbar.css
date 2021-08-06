@@ -1,0 +1,33 @@
+.menu-active{
+   position: relative;
+   z-index: 2;
+}
+
+.navbar-base{
+   font-family: 'Fondamento', cursive;
+}
+
+.menu-active:before{
+   content: '';
+   position: absolute;
+   background-color: #63745E;
+   width: 120%;
+   height: 160%;
+   top: -12%;
+   left: -10%;
+   z-index: -1;
+   border-bottom-right-radius: 0.375rem;
+   border-bottom-left-radius: 0.375rem;
+   box-shadow: -2px 8px 14px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-wrapper{
+   top: -78px;
+   right: 50px
+}
+
+.avatar{
+   position: absolute;
+   top: -10%;
+   right: 10px;
+}

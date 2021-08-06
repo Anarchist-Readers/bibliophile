@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import BookList from "./components/BookList";
 import BookDetails from "./components/BookDetails"
 import Login from './components/Login';
+import Footer from './components/Footer'
 
 
 
@@ -18,7 +19,7 @@ function App() {
     <Router>
     <div >
       <Navbar / >
-      Welcome Anarchists!
+
       
       {/* Routes */}
       <Switch>
@@ -26,8 +27,11 @@ function App() {
         <Route path='/books/' exact component={BookList} />
         <Route path='/books/:id' exact component={BookDetails} />
       </Switch>
-    </div>
+      </div>
+      <Footer />
     </Router>
+
+   
   );
 }
 

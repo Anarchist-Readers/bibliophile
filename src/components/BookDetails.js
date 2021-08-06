@@ -84,9 +84,6 @@ const BookDetails = ({match}) => {
         </div>
       </div>
     </div> 
-    <div>
-        
-    </div>
     : null }
   </div>)
 }
