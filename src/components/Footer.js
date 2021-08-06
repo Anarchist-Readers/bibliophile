@@ -9,7 +9,7 @@ const Footer = () => {
             <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
               
                 <div class="flex flex-col max-w-3xl">
-                        <img   src="images/footerimage.jpg" alt="img"/>
+                        <img   src="/images/footerimage.jpg" alt="img"/>
                      </div>
                      <div class="flex flex-col justify-center pl-10 text-3xl text-bookGreen border-bookRed-50">
                         <h1>Reading is the greatest Adventure one could experience.. So Keep Reading !!</h1>

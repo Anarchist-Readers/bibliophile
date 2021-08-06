@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
-import './Book.css'
+import {Link} from 'react-router-dom';
+import './Books.css';
 
-const Book = ({book}) => {
+const Authors = ({author}) => {
     let ratingColor = 'bg-yellow-100'
     if (book.rating > 4) {
         ratingColor = 'bg-yellow-400'
@@ -69,4 +69,4 @@ const Book = ({book}) => {
 }
 
 
-  export default Book
+  export default Authors

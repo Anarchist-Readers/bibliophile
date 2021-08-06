@@ -1,12 +1,16 @@
-import { React, useState, useEffect };
+import React from 'react';
 import axios from 'axios';
+import BookList from './BookList';
 
-const baseURL = 'http://localhost:3001/api/books/'
 
-const Search = ({title}) => {
-   useEffect(()=> {
-       axios.get(baseURL+)
-   })
+
+const Search = ({ searchValue }) => {
+   
+  return (
+    <div>
+      Hi From Search {searchValue}
+    </div>
+)
 }
 
 export default Search;

@@ -23,6 +23,7 @@ const SliderCard = ({id}) => {
    
    return (
    <div class="flex flex-col p-3 bg-bookWhite w-max rounded-xl">
+        <Link to={`/books/${id}`}>
         <div class="relative">
             <img class="h-96 rounded-xl sliderCardImage" src={sliderDetail.cover_url} alt="bookimg" />
             <div class="absolute bottom-2 right-2 bg-bookRed p-1 px-2 rounded-xl text-white">
@@ -33,6 +34,7 @@ const SliderCard = ({id}) => {
           <h3 class="text-2xl text-gray-500">{sliderDetail.title}</h3>
           <p class="text-base">{sliderDetail.author}</p>
           </div>
+          </Link>
       </div>
    )
 
