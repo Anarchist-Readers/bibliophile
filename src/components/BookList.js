@@ -5,13 +5,21 @@ import { useState, useEffect } from 'react'
 
 const baseURL = 'http://localhost:3001/api/books'
 
-const BookList=()=>{
+const BookList=({isFavourite, isRead})=>{
     const [ bookList, setBookList ] = useState(false)
     const [ loading, setLoading ] = useState(true)
     useEffect(()=>{
         axios.get(baseURL)
         .then((res)=>{
-            setBookList(res.data)
+            let data = []
+            if (isFavourite) {
+                data = res.data.filter(book => book.isFavourite)
+            } else if (isRead) {
+                data = res.data.filter(book => book.isRead)
+            } else {
+                data = res.data
+            }
+            setBookList(data)
             setLoading(false)    
         })
         .catch((err)=>{
